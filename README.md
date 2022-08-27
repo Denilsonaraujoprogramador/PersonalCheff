@@ -34,15 +34,15 @@ ou para questão de permissão inserir o ".py" no django-admin.py ficando da seg
 cd PersonalCheffProj
 python manage.py runserver
 ```
-- [X] Alterar o idioma do projeto no ***arquivo settings.py*** para `pt-br`
-- [X] Alterar o timezome do projeto no ***arquivo settings.py*** para `America/Sao_Paulo` 
+- [X] Alterar o idioma do projeto no arquivo settings.py para `pt-br`
+- [X] Alterar o timezome do projeto no arquivo settings.py para `America/Sao_Paulo` 
 <br><br>
-- [] Criar o app receitas
+- [X] Criar o app receitas
 ```
 python manage.py startapp receitas
 ```
-- [] Registrar o nome do app receitas no ***`settings.py >> INSTALLED_APPS`***
-- [] Configurar a rota inicial na `urls.py`
+- [X] Registrar e adicionar o nome do app "receitas" no ***`settings.py >> INSTALLED_APPS`***
+- [X] Adicionar arquivo urls.py no app receitas e Configurar a rota inicial do arquivo `urls.py`
 - [] Criar a `view` para rota inicial
 - [] Registrar a rota inicial
 - [] Criar o arquivo index.html
