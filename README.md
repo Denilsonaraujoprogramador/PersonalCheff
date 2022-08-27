@@ -14,14 +14,14 @@ Segue a lista de tarefas a serem desenvolvidas no projeto:
     - [X] Instalar o Python
     - [X] Instalar Visual Studio Code
 <br><br>
-- [X] Criar e ativar o ambiente virtual e ativar
+- [X] Criar e ativar o ambiente virtual
 ```
 python -m venv .\venv\
 venv\Scripts\activate
 ```
 - [] Instalar o Django
 ```
-pip install Django
+pip install Django, ou para versão especifica, python -m pip install django==3.2
 ```
 - [] Criar o projeto PersonalCheff
 ```
@@ -37,9 +37,9 @@ python manage.py runserver
 ```
 python manage.py startapp
 ```
-- [] Registrar o app receitas no settings
-- [] Configurar a rota inicial
-- [] Criar a view para rota inicial
+- [] Registrar o app receitas no ***`settings`***
+- [] Configurar a rota inicial na `urls.py`
+- [] Criar a `view` para rota inicial
 - [] Registrar a rota inicial
 - [] Criar o arquivo index.html
 
