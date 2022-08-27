@@ -21,14 +21,17 @@ venv\Scripts\activate
 ```
 - [] Instalar o Django
 ```
-pip install Django, ou para versão especifica, python -m pip install django==3.2
+pip install Django
+ou para versão especifica nesse caso a versão 3.2, python -m pip install django==3.2
 ```
 - [] Criar o projeto PersonalCheff
 ```
-django-admin startproject personalcheff
+django-admin startproject PersonalCheffProj
+ou para questão de permissão inserir o ".py" no django-admin.py ficando da seguinte forma, django-admin.py startproject PersonalCheffProj
 ```
-- [] Subir o servidor e testar o projeto
+- [] Abri a pasta PersonalCheffProj e Subir o servidor e testar o projeto
 ```
+cd PersonalCheffProj
 python manage.py runserver
 ```
 - [] Alterar o idioma do projeto para `pt-br`
