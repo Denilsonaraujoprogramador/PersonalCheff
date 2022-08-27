@@ -13,6 +13,35 @@ Segue a lista de tarefas a serem desenvolvidas no projeto:
 - [X] Pré-requisitos
     - [X] Instalar o Python
     - [X] Instalar Visual Studio Code
+<br><br>
+- [X] Criar e ativar o ambiente virtual e ativar
+```
+python -m venv .\venv\
+venv\Scripts\activate
+```
+- [] Instalar o Django
+```
+pip install Django
+```
+- [] Criar o projeto PersonalCheff
+```
+django-admin startproject personalcheff
+```
+- [] Subir o servidor e testar o projeto
+```
+python manage.py runserver
+```
+- [] Alterar o idioma do projeto para `pt-br`
+- [] Alterar o timezome do projeto para `America/Sao_Paulo` <br><br>
+- [] Criar o app receitas
+```
+python manage.py startapp
+```
+- [] Registrar o app receitas no settings
+- [] Configurar a rota inicial
+- [] Criar a view para rota inicial
+- [] Registrar a rota inicial
+- [] Criar o arquivo index.html
 
 ## 📝 Licença
 Esse projeto está sob licença. Veja o arquivo [LICENÇA](LICENSE.md) para mais detalhes.
