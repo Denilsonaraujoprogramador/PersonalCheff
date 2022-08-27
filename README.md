@@ -19,28 +19,29 @@ Segue a lista de tarefas a serem desenvolvidas no projeto:
 python -m venv .\venv\
 venv\Scripts\activate
 ```
-- [] Instalar o Django
+- [X] Instalar o Django
 ```
 pip install Django
 ou para versão especifica nesse caso a versão 3.2, python -m pip install django==3.2
 ```
-- [] Criar o projeto PersonalCheff
+- [X] Criar o projeto PersonalCheff
 ```
 django-admin startproject PersonalCheffProj
 ou para questão de permissão inserir o ".py" no django-admin.py ficando da seguinte forma, django-admin.py startproject PersonalCheffProj
 ```
-- [] Abri a pasta PersonalCheffProj e Subir o servidor e testar o projeto
+- [X] Abri a pasta PersonalCheffProj e subir o servidor e testar o projeto
 ```
 cd PersonalCheffProj
 python manage.py runserver
 ```
-- [] Alterar o idioma do projeto para `pt-br`
-- [] Alterar o timezome do projeto para `America/Sao_Paulo` <br><br>
+- [X] Alterar o idioma do projeto no ***arquivo settings.py*** para `pt-br`
+- [X] Alterar o timezome do projeto no ***arquivo settings.py*** para `America/Sao_Paulo` 
+<br><br>
 - [] Criar o app receitas
 ```
-python manage.py startapp
+python manage.py startapp receitas
 ```
-- [] Registrar o app receitas no ***`settings`***
+- [] Registrar o nome do app receitas no ***`settings.py >> INSTALLED_APPS`***
 - [] Configurar a rota inicial na `urls.py`
 - [] Criar a `view` para rota inicial
 - [] Registrar a rota inicial
