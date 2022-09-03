@@ -43,9 +43,19 @@ python manage.py startapp receitas
 ```
 - [X] Registrar e adicionar o nome do app "receitas" no ***`settings.py >> INSTALLED_APPS`***
 - [X] Adicionar arquivo urls.py no app receitas e Configurar a rota inicial do arquivo `urls.py`
-- [] Criar a `view` para rota inicial
-- [] Registrar a rota inicial
-- [] Criar o arquivo index.html
+- [x] Criar a `view` para rota inicial
+- [x] Registrar a rota inicial
+- [x] Dentro da pasta receitas(app), crie a pasta `templates`
+- [x] Crie seus arquivos HTML começando pelo arquivo `index.hmtl`, dentro da pasta templates do app 'receitas'
+- [x] No arquivo `views.py` que está dentro da paste do app `realize a seguite alteração para renderizar o arquivo index.html`:
+    ```python
+        from django.shortcuts import render
+
+        def index(request):
+            return render(request, 'index.html')
+    ```
+
+
 
 ## 📝 Licença
 Esse projeto está sob licença. Veja o arquivo [LICENÇA](LICENSE.md) para mais detalhes.
