@@ -54,6 +54,12 @@ python manage.py startapp receitas
         def index(request):
             return render(request, 'index.html')
     ```
+- [x] Crie o arquivo `sucodelaranja.hmtl`, dentro da pasta templates do app 'receitas'
+- [x] No arquivo `views.py` que está dentro da paste do app `inclua a função abaixo para renderizar o arquivo sucodelaranja.html`:
+    ```python
+        def sucodelaranja(request):
+            return render(request, 'sucodelaranja.html')
+    ```
 
 
 
