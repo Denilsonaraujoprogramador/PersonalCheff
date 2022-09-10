@@ -65,7 +65,46 @@ python manage.py startapp receitas
 PADRÃO PARA CRIAR AS PÁGINAS (MODEL/VIEW/TEMPLATE) ITEM 14 CITADO ACIMA.*** <br>
 <img src="passo_a_passo.png" alt="passo_a_passo">
 
+-15 [x] <br>
+    -Integrar arquivos estáticos (CSS, JS, IMG)
+    - Dentro da pasta do projeto (PersonaCheffProj), criar a pasta `static` <br>
+    -Dentro da pasta static, colocar as imagens, os arquivos CSS e Javascript (JS) conforme for utilizando. <br>
+    -No arquivo `settings.py` realize a importação da biblioteca `import os` <br>
+    -`No settings.py, menu TEMPLATES, submenu DIRS configure o caminho conforme abaixo e crie os menus STATIC_ROOT e  STATICFILES_DIRS:` <br>
 
+    'DIRS': [os.path.join(BASE_DIR, 'receitas/templates')]
+
+    STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+
+    STATICFILES_DIRS = [os.path.join(BASE_DIR, 'PersonalCheffProj/static')]
+
+   -Execute o comando no terminal `python manage.py collectstatic` para organizar as pastas e arquivos CSS/JS/IMG automaticamente. <br><br> 
+    -Na primeira linha dos arquivos seus arquivos HTML que possuirem arquivo státicos inclua sempre `{% load static %}`.
+    -Insira imagem utilizando o comando, exemplo: `<img src="{% static 'logo.png'%}"`>. 
+
+-16 [] Utilizando links
+
+-17 [] Criando o base.html
+
+-18 [] Separando em partials
+
+-19 [] Renderizando dados dinamicamente
+
+-20 [] Criando um dicionario com as receitas
+
+-21 [] Criando o banco de dados(MySQL/MariaDB)
+
+-22 [] Instalando o conector do bando de dados MySQL
+
+-23 [] Criando o modelo da receita
+
+-24 [] Criando a migration (mapeamento)
+
+-25 [] Realizando a migration
+
+-26 [] Registrando um modelo no admin
+
+-27 [] Criando um usuário para o ambiente administrativo
 
 
 
