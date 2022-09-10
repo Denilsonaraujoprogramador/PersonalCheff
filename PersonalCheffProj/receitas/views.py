@@ -6,3 +6,11 @@ def index(request):
 def sucodelaranja(request):
     return render(request, 'sucodelaranja.html')
 
+def sucodelimao(request):
+    return render(request, 'sucodelimao.html')
+
+def tortadefrango(request):
+    return render(request, 'tortadefrango.html')
+
+def bolodechocolate(request):
+    return render(request, 'bolodechocolate.html')
