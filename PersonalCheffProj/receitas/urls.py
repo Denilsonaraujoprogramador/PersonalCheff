@@ -7,7 +7,6 @@ urlpatterns = [
     path('sucodelaranja/', views.sucodelaranja, name='sucodelaranja'),
     path('sucodelimao/', views.sucodelimao, name='sucodelimao'),
     path('tortadefrango/', views.tortadefrango, name='tortadefrango'),
-    path('bolodechocolate/', views.bolodechocolate, name='bolodechocolate'),
     
 
 ]

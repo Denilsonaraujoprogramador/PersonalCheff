@@ -18,33 +18,37 @@
     <h2>Seu site de receitas</h2>
 
     <table border="1" class="tabela-receitas">
+
         <tr>
             <th>Receita</th>
             <th>Video</th>
             <th>Ações</th>
         </tr>
+
         <tr>
             <td> <img src="{% static 'sucolaranja.png' %}" class="icones">
                 Suco de Laranja
             </td>
             <td>https://www.youtube.com/watch?v=Nn9140bDPnc</td>
-            <td><a href="sucodelaranja/">Ver receita completa</a></td>
+            <td><a href="{% url 'sucodelaranja' %}">Ver receita completa</a></td>
         </tr>
-        <tr>
-            <td>Suco de Limão</td>
+
+        <tr>    
+            <td> <img src="{% static 'sucolaranja.png' %}" class="icones">
+                Suco de Limão
+            </td>
             <td>https://www.youtube.com/watch?v=7aavIewcSY4</td>
             <td><a href="sucodelimao/">Ver receita completa</a></td>
         </tr>
+
         <tr>
-            <td>Torta de frango</td>
+            <td><img src="{% static 'sucolaranja.png' %}" class="icones">
+                Torta de frango
+            </td>
             <td>https://www.youtube.com/watch?v=VK_64PuG3TI</td>
             <td><a href="tortadefrango/">Ver receita completa</a></td>
         </tr>
-        <tr>
-            <td>Bolo de chocolate</td>
-            <td>https://www.youtube.com/watch?v=QFMxJWh3mqE</td>
-            <td><a href="bolodechocolate/">Ver receita completa</a></td>
-        </tr>
+
     </table>
     
 </body>

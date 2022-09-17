@@ -12,5 +12,3 @@ def sucodelimao(request):
 def tortadefrango(request):
     return render(request, 'tortadefrango.html')
 
-def bolodechocolate(request):
-    return render(request, 'bolodechocolate.html')

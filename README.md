@@ -82,7 +82,10 @@ PADRÃO PARA CRIAR AS PÁGINAS (MODEL/VIEW/TEMPLATE) ITEM 14 CITADO ACIMA.*** <b
     -Na primeira linha dos arquivos seus arquivos HTML que possuirem arquivo státicos inclua sempre `{% load static %}`.
     -Insira imagem utilizando o comando, exemplo: `<img src="{% static 'logo.png'%}"`>. 
 
--16 [] Utilizando links
+-16 [x] Utilizando links
+    -Para criar um link para página index, independente de onte você esteja utilize o comando `url`:
+    
+    <a href="{% url 'index' %}"> Voltar </a>
 
 -17 [] Criando o base.html
 
