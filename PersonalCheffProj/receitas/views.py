@@ -12,3 +12,6 @@ def sucodelimao(request):
 def tortadefrango(request):
     return render(request, 'tortadefrango.html')
 
+def contato(request):
+    return render(request, 'contato.html')
+

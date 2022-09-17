@@ -20,3 +20,23 @@ body{
     height: 20px;
 
 }
+
+footer{
+    text-align: center;
+    background-color: darkblue;
+    color: white;
+    font-size: 16px;
+    padding: 10px;
+    margin-top: 50px;
+
+}
+
+footer a{
+    color: lightcoral;
+}
+
+nav{
+    text-align: center;
+    
+
+}

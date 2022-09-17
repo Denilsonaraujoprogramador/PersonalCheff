@@ -87,9 +87,37 @@ PADRÃO PARA CRIAR AS PÁGINAS (MODEL/VIEW/TEMPLATE) ITEM 14 CITADO ACIMA.*** <b
     
     <a href="{% url 'index' %}"> Voltar </a>
 
--17 [] Criando o base.html
+-17 [x] Criando o `base.html` para otimizar o padrão de layout 
+    -Na pasta `templates` crie o arquivo `base.html`. Esse arquivo irá conter todo codigo de estrutura comum as páginas. Nesse aquivo deve ficar tudo que tiver antes do `body` e tudo que estiver depois do `body`.<br>
+    -Nesse arquivo deve conter no inicio da página o `{% load static %}`.<br>
+    -nesse arquivo, no local onde será carregado o contúdo das outras páginas utilizando os delimitadores `{% block content %}` e `{% endblock %}`.<br>
+    -O código será algo semelhante ao exemplo abaixo:
+    
+    
+    {% extends 'base.html' %}
+    {% load static %}
 
--18 [] Separando em partials
+    {% block content %}
+
+    <h1>PersonalCheff</h1>
+    <h2>Receita de suco de laranja</h2>
+    <h2>Modo de preparo</h2>
+    <ul>
+        <li>Lave a Laranja</li>
+        <li>Esprema a laranja</li>
+        <li>Adoce a gosto</li>
+    </ul>
+
+    <a href="{% url 'index' %}"> Voltar </a>
+
+    {% endblock %}
+    
+
+-18 [x] Separando em partials.<br>
+    -Criar uma pasta chamada `partials` dentro da pasta tamplates<br>
+    -Dentro da pasta partials, crie os arquivos q serão as ** partes globais** utilizadas no seus projeto como: `header.html`, `footer.html`, `side_bar.html`, `banner.html`, etc.  No nosso exemplo criamos as partials `header e footer`.<br>
+    -Insira em cada um dos arquivos os códigos correspondentes, exemplo: No arquivo `header.html` eu insiro todo conteudo que desejo que seja representado no meu cabeçalho da minha aplicação. ***OBS: sempre inserir o {% load static %}***<br>
+    -Para inserir as partials no arquivo de destino utilizamos o comando `include` da seguinte maneira: `{% include 'partials/header.html' %}`
 
 -19 [] Renderizando dados dinamicamente
 
