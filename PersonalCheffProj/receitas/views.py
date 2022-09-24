@@ -1,7 +1,19 @@
 from django.shortcuts import render
 
 def index(request):
-    return render(request, 'index.html')
+    receitas = {
+        1:'Suco de limão',
+        2:'Suco de Laranja',
+        3:'Torta de Frango',                       
+    }
+
+    dados = {
+        'lista_receitas': receitas
+    }
+    return render(request, 'index.html', dados)
+
+def contato(request):
+    return render(request, 'contato.html')
 
 def sucodelaranja(request):
     return render(request, 'sucodelaranja.html')
@@ -12,6 +24,4 @@ def sucodelimao(request):
 def tortadefrango(request):
     return render(request, 'tortadefrango.html')
 
-def contato(request):
-    return render(request, 'contato.html')
 

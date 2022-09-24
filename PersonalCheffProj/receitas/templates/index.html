@@ -4,42 +4,30 @@
 {% block content %}
 
 {% include 'partials/header.html' %}
-<h2>Seu site de receitas</h2>   
-    <table border="1" class="tabela-receitas">
 
-        <tr>
+{% include 'partials/menu.html' %}
+
+<h2>Seu site de receitas</h2>   
+    <table border="1" class="table table-light" >
+
+        <tr class="table-dark">
             <th>Receita</th>
             <th>Video</th>
             <th>Ações</th>
         </tr>
 
+        {% for chave, uma_receita in lista_receitas.items %}
         <tr>
             <td> <img src="{% static 'sucolaranja.png' %}" class="icones">
-                Suco de Laranja
+                <strong> {{ uma_receita }}
             </td>
             <td>https://www.youtube.com/watch?v=Nn9140bDPnc</td>
-            <td><a href="{% url 'sucodelaranja' %}">Ver receita completa</a></td>
+            <td><a href="{% url 'sucodelaranja' %}" class="btn btn-secondary">Ver receita completa</a></td>
         </tr>
-
-        <tr>    
-            <td> <img src="{% static 'sucolaranja.png' %}" class="icones">
-                Suco de Limão
-            </td>
-            <td>https://www.youtube.com/watch?v=7aavIewcSY4</td>
-            <td><a href="sucodelimao/">Ver receita completa</a></td>
-        </tr>
-
-        <tr>
-            <td><img src="{% static 'Torta.png' %}" class="icones">
-                Torta de frango
-            </td>
-            <td>https://www.youtube.com/watch?v=VK_64PuG3TI</td>
-            <td><a href="tortadefrango/">Ver receita completa</a></td>
-        </tr>
+        {% endfor %}
 
     </table>
 
 {% include 'partials/footer.html' %}
-
 
 {% endblock %}

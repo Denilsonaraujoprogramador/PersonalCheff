@@ -119,23 +119,70 @@ PADRÃO PARA CRIAR AS PÁGINAS (MODEL/VIEW/TEMPLATE) ITEM 14 CITADO ACIMA.*** <b
     -Insira em cada um dos arquivos os códigos correspondentes, exemplo: No arquivo `header.html` eu insiro todo conteudo que desejo que seja representado no meu cabeçalho da minha aplicação. ***OBS: sempre inserir o {% load static %}***<br>
     -Para inserir as partials no arquivo de destino utilizamos o comando `include` da seguinte maneira: `{% include 'partials/header.html' %}`
 
--19 [] Renderizando dados dinamicamente
+-19 [x] Renderizando dados dinamicamente
 
--20 [] Criando um dicionario com as receitas
+-Trocar as informações fixas no arquivo html por informações dinâmicas vindas do arquivo python.<br>
+-Quero gerar a lista de receitas de foram dinâmica, vamos fazer isso utilizando o recurso do Django que passa uma informação para minhas templates(.html) através da passagem de uma parâmetro no comando render que está em minha view(.py):<br>
+return render(request,'index.html', {'nome_da_receita':'suco de laranja'})<br>
+-Observer que passei através do comando render um dicionário para a template. Na minha template(index.html) eu posso exibir o conteúdo desse dicionário da seguinte forma:
+    
+    <td><img src="{% static 'suco.png' %}" class="icone-suco">
+        {{nome_da_receita}}</td>
 
--21 [] Criando o banco de dados(MySQL/MariaDB)
+-Vale a pena diferenciar o uso de {{ }} e {% %}:<br>
+>{{ }} é utilizado normalmente para exibir o valor de variáveis, para mostrar informação em tela<br><br>
+{% %} é utilizado para o processamento de informações, usamos esses delimitadores quando precisamos de if ou forpor exemplo.
 
--22 [] Instalando o conector do bando de dados MySQL
+-20 [x] Criando um dicionario com as receitas<br>
+-No arquivo views.py vamos criar um dicionário com as receitas, modifique a função index da seguinte forma:<br>
+    def index(request):
+        receitas = {
+            1:'Suco de Melão',
+            2:'Pizza',
+            3:'Suco de Limão',
+        }
+        
+        dados = {
+            'lista_receitas' : receitas
+        }
+    return render(request,'index.html', dados)
 
--23 [] Criando o modelo da receita
+-na template index.html, eu faço um laço de repetição que verifique cada item da lista de receitas à cada passagem do laço:<br>
+    ```
 
--24 [] Criando a migration (mapeamento)
+    ```{% for chave, uma_receita in lista_receitas.items %}
+        <tr>
+            <td>
+                <img src="{% static 'suco.png' %}" class="icone-suco">
+                {{uma_receita}}
+            </td>
+            <td>https://www.youtube.com/watch?v=Nn9140bDPnc</td>
+            <td><a href="{% url 'sucodelaranja' %}" class="btn btn-info">Ver receita completa</a></td>
+        </tr>
+    {% endfor %} 
+    <br>
+-para o processamento da inforção sem que haja a exibição, `muitas vezes utilizados com if e for`.
 
--25 [] Realizando a migration
+-21 [x] Criando o banco de dados(MySQL/MariaDB)<br>
+    -Abra o Xammp e start os serviços do Apache e MySQL<br>
+    -Click no botão Admin do Apache<br>
+    -Acesse o Link PHPAdmin<br>
+    -Dentro do PHPMyadmin, click no botão `novo` para criar o banco de dados, insira no nome do seu app no caso nosso `personalcheff_db`.<br><br>
 
--26 [] Registrando um modelo no admin
+-22 [] Instalando o conector do bando de dados MySQL<br>
+    -`pip install mysqlclient`
 
--27 [] Criando um usuário para o ambiente administrativo
+-23 [] configurar a coenxão com mysql
+
+-24 [] Criando o modelo da receita
+
+-25 [] Criando a migration (mapeamento)
+
+-26 [] Realizando a migration
+
+-27 [] Registrando um modelo no admin
+
+-28 [] Criando um usuário para o ambiente administrativo
 
 
 

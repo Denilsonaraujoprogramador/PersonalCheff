@@ -12,7 +12,6 @@ body{
 
 .tabela-receitas{
     width: 90%;
-    text-align: center;
 
 }
 
@@ -37,6 +36,6 @@ footer a{
 
 nav{
     text-align: center;
-    
+    background-color: darkblue;
 
 }
