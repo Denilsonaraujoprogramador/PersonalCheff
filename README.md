@@ -130,8 +130,9 @@ return render(request,'index.html', {'nome_da_receita':'suco de laranja'})<br>
         {{nome_da_receita}}</td>
 
 -Vale a pena diferenciar o uso de {{ }} e {% %}:<br>
->{{ }} é utilizado normalmente para exibir o valor de variáveis, para mostrar informação em tela<br><br>
-{% %} é utilizado para o processamento de informações, usamos esses delimitadores quando precisamos de if ou forpor exemplo.
+        
+    {{ }} é utilizado normalmente para exibir o valor de variáveis, para mostrar informação em tela<br><br>
+    {% %} é utilizado para o processamento de informações, usamos esses delimitadores quando precisamos de if ou forpor exemplo.
 
 -20 [x] Criando um dicionario com as receitas<br>
 -No arquivo views.py vamos criar um dicionário com as receitas, modifique a função index da seguinte forma:<br>
@@ -169,7 +170,7 @@ return render(request,'index.html', {'nome_da_receita':'suco de laranja'})<br>
     -Acesse o Link PHPAdmin<br>
     -Dentro do PHPMyadmin, click no botão `novo` para criar o banco de dados, insira no nome do seu app no caso nosso `personalcheff_db`.<br><br>
 
--22 [] Instalando o conector do bando de dados MySQL<br>
+-22 [x] Instalando o conector do bando de dados MySQL<br>
     -`pip install mysqlclient`
 
 -23 [] configurar a coenxão com mysql
