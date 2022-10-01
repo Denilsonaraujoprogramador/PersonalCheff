@@ -171,19 +171,65 @@ return render(request,'index.html', {'nome_da_receita':'suco de laranja'})<br>
     -Dentro do PHPMyadmin, click no botão `novo` para criar o banco de dados, insira no nome do seu app no caso nosso `personalcheff_db`.<br><br>
 
 -22 [x] Instalando o conector do bando de dados MySQL<br>
-    -`pip install mysqlclient`
+    -Pip install mysqlclient
 
--23 [] configurar a coenxão com mysql
+-23 [x] Configurar a coenxão com mysql <br>
+    -No arquivo settings.py, no local `DATABASES`, aproximadamente na linha 77 configurar a conexão para o seu banco de dados como no exemplo:
 
--24 [] Criando o modelo da receita
+        'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'personalcheff_bd',
+        'USER': 'root',
+        'PASSWORD': '',
+        'HOST': 'localhost',
+        'PORT': '3306',
+        }
 
--25 [] Criando a migration (mapeamento)
+-24 [x] Criando o modelo da receita
+    -Um modelo é a representação das tabelas no banco de dados. Cada classe em uma models equivale a uma tabela.
+    No arquivo `receita/models.py` crie a classe abaixo para representação da tabela de receitas.
 
--26 [] Realizando a migration
+        from django.db import models
+        from datetime import datetime
+        
+        class Receitas(models.Model):
+            nome_receita = models.CharField(max_length=100)
+            video = models.CharField(max_length=80)
+            modo_preparo = models.TextField()
+            ingredientes = models.TextField()
+            nota = models.IntegerField()
+            data_receita = models.DateTimeField(default=datetime.now, blank=True)
 
--27 [] Registrando um modelo no admin
+-25 [x] Criando a migration (mapeamento)
+    -Prepara todas as models criadas para serem migradas para o banco de dados.
+    No terminal execute o seguinte comando:
+    `Python manage.py makemigrations`
 
--28 [] Criando um usuário para o ambiente administrativo
+-26 [x] Realizando a migration
+    -Para realizar a efetivação da tabela no banco de dados das tabelas preparadas anteriormente e as criadas pelo dajango utilize o seguinte comando:
+    `Python manage.py migrate`
+
+-27 [x] Criando um usuário para o ambiente administrativo
+    -O Django já cria uma ambiente administrativo para nossa aplicação, ficando esse ambiente em: http://127.0.0.1:8000/admin/
+    -Para utilizar o ambinte é necessario criar um Super user atraver do comando:
+        `Python manage.py createsuperuser`
+
+-28 [x] Registrando um modelo no admin
+    -Para criar o módulo referente ao nosso APP no ambiente administrativo, precisamo registrar esses modelos no admin.
+    -Abra o arquivo `receitas\admin.py` e registre seu modelo:
+
+        ```
+        from django.contrib import admin
+        from .models import Receitas
+
+        # Register your models here.
+        admin.site.register(Receitas)
+        ```
+
+-29 [] Trazendo os dados do banco de dados
+
+-30 [] Exibição das paginas individuais das receitas
+
 
 
 

@@ -1,11 +1,8 @@
 from django.shortcuts import render
+from .models import Receitas
 
 def index(request):
-    receitas = {
-        1:'Suco de limão',
-        2:'Suco de Laranja',
-        3:'Torta de Frango',                       
-    }
+    receitas = Receitas.objects.all()
 
     dados = {
         'lista_receitas': receitas
@@ -23,5 +20,6 @@ def sucodelimao(request):
 
 def tortadefrango(request):
     return render(request, 'tortadefrango.html')
+
 
 
